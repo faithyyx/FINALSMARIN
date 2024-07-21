@@ -6,6 +6,7 @@ const ItemForm = ({ item, onSuccess }) => {
     const [middleName, setMiddleName] = useState('');
     const [lastName, setLastName] = useState('');
     const [address, setAddress] = useState('');
+    const [zip_code, setZipCode] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [birthday, setBirthday] = useState('');
@@ -17,6 +18,7 @@ const ItemForm = ({ item, onSuccess }) => {
     const [religion, setReligion] = useState('');
     const [height_CM, setHeight] = useState('');
     const [weight_KG, setWeight] = useState('');
+    const [blood_type, setBloodType] = useState('');
     const [momFN, setMomFirstName] = useState('');
     const [momMN, setMomMiddleName] = useState('');
     const [momLN, setMomLastName] = useState('');
@@ -35,6 +37,7 @@ const ItemForm = ({ item, onSuccess }) => {
             setMiddleName(item.middle_name);
             setLastName(item.last_name);
             setAddress(item.address);
+            setZipCode(item.zip_code);
             setEmail(item.email);
             setPhone(item.phone);
             setBirthday(item.birthday);
@@ -46,6 +49,7 @@ const ItemForm = ({ item, onSuccess }) => {
             setReligion(item.religion);
             setHeight(item.height_CM);
             setWeight(item.weight_KG);
+            setBloodType(item.blood_type);
             setMomFirstName(item.momFN);
             setMomMiddleName(item.momMN);
             setMomLastName(item.momLN);
@@ -66,6 +70,7 @@ const ItemForm = ({ item, onSuccess }) => {
             middle_name: middleName,
             last_name: lastName,
             address,
+            zip_code,
             email,
             phone,
             birthday,
@@ -77,6 +82,7 @@ const ItemForm = ({ item, onSuccess }) => {
             religion,
             height_CM,
             weight_KG,
+            blood_type,
             mother_first_name: momFN,
             mother_middle_name: momMN,
             mother_last_name: momLN,
@@ -122,6 +128,10 @@ const ItemForm = ({ item, onSuccess }) => {
                 <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
             </div>
             <div>
+                <label>Zip Code:</label>
+                <input type="text" value={zip_code} onChange={(e) => setZipCode(e.target.value)} />
+            </div>
+            <div>
                 <label>Contact No.:</label>
                 <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </div>
@@ -164,6 +174,10 @@ const ItemForm = ({ item, onSuccess }) => {
             <div>
                 <label>Weight:</label>
                 <input type="text" value={weight_KG} onChange={(e) => setWeight(e.target.value)} />
+            </div>
+            <div>
+                <label>Blood Type:</label>
+                <input type="text" value={blood_type} onChange={(e) => setBloodType(e.target.value)} />
             </div>
             <div>
                 <label>Mother's First Name:</label>
